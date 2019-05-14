@@ -1,11 +1,15 @@
-<ion-header>
+<!-- Previous way -->
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button [defaultHref]="defaultHref"></ion-back-button>
     </ion-buttons>
     <ion-title>{{session?.name}}</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+
+<!-- Custom component way -->
+<custom-header [title]="session?.name" [defaultHref]="defaultHref"></custom-header>
 
 <ion-content>
   <div *ngIf="session" class="ion-padding">

@@ -1,11 +1,15 @@
-<ion-header>
+<!-- Previous way -->
+<!-- <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/app/tabs/speakers"></ion-back-button>
     </ion-buttons>
     <ion-title>{{speaker?.name}}</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+
+<!-- Custom component way -->
+<custom-header [title]="speaker?.name" defaultHref="/app/tabs/speakers"></custom-header>
 
 <ion-content class="ion-padding speaker-detail">
   <div *ngIf="speaker" class="ion-text-center">
